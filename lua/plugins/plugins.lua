@@ -7,6 +7,25 @@ return {
     "MunifTanjim/nui.nvim", -- Required for Neo-tree
   },
 {
+  "azratul/live-share.nvim",
+  dependencies = {
+    "jbyuki/instant.nvim",
+  }
+},
+ {
+        'gorbit99/codewindow.nvim',
+        config = function()
+            require('codewindow').setup({
+                -- Add your custom configuration options here
+                active_in_terminals = false,
+                auto_enable = true,
+                exclude_filetypes = { 'help' },
+                window_border = 'single',
+minimap_width = 10, 
+            })
+        end,
+    },
+{
   'stevearc/oil.nvim',
   ---@module 'oil'
   ---@type oil.SetupOpts
